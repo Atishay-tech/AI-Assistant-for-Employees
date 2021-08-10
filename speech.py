@@ -1,5 +1,4 @@
 """Module for performing speech recognition and text to speech methods."""
-
 import pyttsx3
 import speech_recognition as sr
 
@@ -46,8 +45,12 @@ class VoiceEngine():
             with mic as source:
                 if adjust:
                     self.recognizer.adjust_for_ambient_noise(source)
+                
                 print("Listening...")
+                self.speak("Present at your service.")
+                print("Speak command: ", end='')
                 audio_data = self.recognizer.listen(source)
+                print()
             return self._audio_to_str(audio_data, show_all)
 
         except:

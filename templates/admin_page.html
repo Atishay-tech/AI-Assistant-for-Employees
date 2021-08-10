@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+    <p>Welcome {{ name }},</p>
+
+    <form><button id="meetings" type="submit" formaction="/meetings/{{ id }}">View meetings</button></form>
+    <br />
+
+    <form><button id="projects" type="submit" formaction="/projects/{{ id }}">View Projects</button></form>
+    <br />
+    
+    <form id='addemployee' action="/addemployee" method="POST">
+        <label>Employee ID: <input type="text" name="id"></label></br>
+        <label>Name: <input type="text" name="name"></label></br>
+        <label>Password: <input type="password" name="password"></label></br>
+        <label>Address: <input type="text" name="address"></label></br>
+        <label>Phone no: <input type="number" name="number"></label></br>
+
+        <input type="submit" value="Add new employee">
+    </form>
+    <br />
+
+    <form id='addmeeting' action="/addmeeting" method="POST">
+        <label>Date: <input type="date" name="date"></label></br>
+        <label>Time: <input type="time" name="time"></label></br>
+        <label>Description: <input type="text" name="info"></label></br>
+        <label>Employee ID's: <input type="text" name="employees"></label></br>
+        <label><input type="checkbox" name="allow_all" value="True"> Allow all employees</label>
+
+        <input type="submit" value="Add new meeting">
+    </form>
+    <br />
+
+    <form id='addproject' action="/addproject" method="POST">
+        <label>Project ID: <input type="text" name="id"></label></br>
+        <label>Project Name: <input type="text" name="name"></label></br>
+        <label>Deadline: <input type="date" name="date"></label></br>
+        <label>Description: <input type="text" name="info"></label></br>
+        <label>Employee ID's: <input type="text" name="employees"></label></br>
+
+        <input type="submit" value="Add new project">
+    </form>
+    <br />
+
+    <form><button id="logout" type="submit" formaction="/logout">Logout</button></form>
+</body>
+</html>

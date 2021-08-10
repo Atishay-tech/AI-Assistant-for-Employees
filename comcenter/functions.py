@@ -40,4 +40,4 @@ def open_site(site_name: str) -> 'Browser tab':
         wb.open_new_tab(f'https://www.{site_name.lower()}.com')
     
     else:
-        wb.open_new_tab('https://www.google.com')
+        wb.open_new_tab(f'https://www.google.com/search?q={site_name}')

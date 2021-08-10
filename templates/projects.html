@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Projects</title>
+</head>
+<body>
+    <p>Projects:</p>
+    <hr />
+
+    {% for project in projects %}
+    <p>
+        Project ID: {{ project[0] }} <br/>
+        Project Name: {{ project[1] }} <br />
+        Deadline: {{ project[3] }} <br />
+        Description: {{ project[2] }} <br />
+        <form><button type="submit" formaction="/project_completed/{{ project[0] }}">Mark as Completed</button></form>
+        <hr />
+    </p>
+    {% endfor %}
+
+    <form><button type="submit" formaction="/logout">Logout</button></form>
+</body>
+</html>

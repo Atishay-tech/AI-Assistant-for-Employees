@@ -1,0 +1,33 @@
+{"intents": [
+      {
+        "tag": "change_details",
+        "patterns": ["change", "change login details", "change password", "update", "updating", "change info"],
+        "responses": "change_details"
+      },
+      {"tag": "open_site",
+        "patterns": ["site", "web site", "website", "login", "log in"],
+        "responses": "open_site"
+      },
+      {"tag": "add_meeting",
+        "patterns": ["add meeting", "add meetings", "schedule meetings"],
+        "responses": "add_meeting"
+      },
+       {"tag": "meetings",
+        "patterns": ["meeting", "meetings", "schedule", "what i have to do today", "what do i do today"],
+        "responses": "meetings"
+      },
+      {"tag": "add_project",
+        "patterns": ["add project", "add projects", "deadlines"],
+        "responses": "add_project"
+      },
+      {
+        "tag": "projects",
+        "patterns": ["projects", "project", "deadlines"],
+        "responses": "projects"
+      },
+      {"tag": "add_employee",
+        "patterns": ["add employee", "add employees", "add worker", "add workers"],
+        "responses": "add_employee"
+      }
+  ]
+}

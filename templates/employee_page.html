@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <p>Welcome {{ name }},</p>
+
+    <form><button id="meetings" type="submit" formaction="/meetings/{{ id }}">View meetings</button></form>
+    <br />
+
+    <form><button id="projects" type="submit" formaction="/projects/{{ id }}">View Projects</button></form>
+    <br />
+
+    <form><button id="logout" type="submit" formaction="/logout">Logout</button></form>
+</body>
+</html>

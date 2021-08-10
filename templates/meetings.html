@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Meetings</title>
+</head>
+<body>
+    <p>Meetings:</p>
+    <hr />
+
+    {% for meeting in meetings %}
+    <p>
+        Meeting ID: {{ meeting[0] }} <br/>
+        Timings: {{ meeting[1] }} <br />
+        Description: {{ meeting[2] }} <br />
+        <form><button type="submit" formaction="/meeting_done/{{ meeting[0] }}">Mark as Attended</button></form>
+        <hr />
+    </p>
+    {% endfor %}
+
+    <form><button type="submit" formaction="/logout">Logout</button></form>
+</body>
+</html>
